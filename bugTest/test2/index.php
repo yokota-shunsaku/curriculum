@@ -34,7 +34,7 @@ if (isset($_POST["signUp"])) {
         // 2. ユーザIDとパスワードが入力されていたら認証する
         $dsn = sprintf('mysql: host=%s; dbname=%s; charset=utf8', $db['host'], $db['dbname']);
 
-        $pdo = db_connect();
+        //$pdo = db_connect();
         // 3. エラー処理
         try {
             $pdo = new PDO($dsn, $db['user'], $db['pass'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
