@@ -1,0 +1,190 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    width: 380px;
+    margin: 0 auto;
+}
+
+.title { 
+    width: 180px;
+    float: left;
+}
+
+.jump_signup {
+    width: 200px;
+    height: 75.81px;
+    white-space: pre-line;
+    float: right;
+}
+
+.jump_signup button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #3bacc0;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #3bacc0;    /* 枠の指定 */
+}
+.jump_signup button:hover {
+  color         : #3bacc0;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.div_input input {
+    width: 400px;
+}
+
+.submit_button {
+  text-align: left;
+}
+
+.submit_button input {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #3386ff;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #3386ff;    /* 枠の指定 */
+  width: 150px;
+}
+.submit_button input:hover {
+  color         : #3386ff;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.submit_button a {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #3386ff;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #3bacc0;    /* 枠の指定 */
+  width: 70px;
+}
+.submit_button a:hover {
+  color         : #3386ff;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.stock_submit {
+  float: left;
+  margin-right: 10px;
+}
+
+.stock_submit button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #3386ff;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 1px solid #3386ff;    /* 枠の指定 */
+  width: 90px;
+}
+.stock_submit button:hover {
+  color         : #3386ff;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.logout_button button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #767f85;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 1px solid #767f85;    /* 枠の指定 */
+  width: 100px;
+}
+.logout_button button:hover {
+  color         : #3386ff;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.main {
+    margin-top: 10px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    text-align: center;
+    width: 600px;
+}
+
+.main th{
+    background-color : #e9ecf0;
+    height: 40px;
+}
+
+.main td{
+    height: 50px;
+}
+
+.delete_button button {
+  display       : inline-block;
+  border-radius : 10%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 6px 12px;   /* 余白       */
+  background    : #e13a49;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #e13a49;    /* 枠の指定 */
+  width: 55px;
+}
+.delete_button button:hover {
+  color         : #e13a49;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.new_book {
+  margin-top: 10px;
+}
+
+.new_book input {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 8px 8px;   /* 余白       */
+  background    : #3386ff;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #3386ff;    /* 枠の指定 */
+  width: 130px;
+}
+.new_book input:hover {
+  color         : #3386ff;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
