@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class SnsController extends Controller
 {
-    public function add()
-  {
-      return view('sns.create');
-  }
-
   public function create(Request $request)
   {
       // Varidationを行う
