@@ -2,11 +2,11 @@ let numbers = [2, 5, 12, 13, 15, 18, 22];
 //ここに答えを実装してください。↓↓↓
 for (let num = 0; num < numbers.length; num++) {
 if (numbers[num] % 2 === 0) {
-    function isEven(num) {
-    console.log(num + 'は偶数です');
-}
     isEven(numbers[num]);
 }
+}
+    function isEven(num) {
+    console.log(num + 'は偶数です');
 }
 
 
