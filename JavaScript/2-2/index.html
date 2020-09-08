@@ -6,8 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="target">Hello World!</div>
-    <input type="button" value="クリック！" onclick="myfunc()">
-    <script src="js/main.js"></script>
+    <input type="button" value="ボタン" onClick="changeBtn()">
+    <p id="p1">ボタンが押されると表示非表示が切り替わります。</p>
+
+    <script>
+        function changeBtn() {
+            // ①id「p1」の要素を取得
+            let p1 = document.getElementById("p1");
+
+            // ②取得したp1に「display:none」が無かったら、「display:none」を付与する。
+            // 取得したp1に「display:none」があったら、「display:block」を付与する。
+            if(p1.style.display=="none"){
+                
+                p1.style.display ="block";
+            }else{
+                
+                p1.style.display ="none";
+            }
+        }
+        console.log(p1);
+    </script>
 </body>
 </html>
