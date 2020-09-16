@@ -39,74 +39,14 @@
     </table>
 
     <script>
-        //①onchangeで使用されている関数の中身を実装してください。
-
-        // if(value === "select"){
-            
-        //     target.textContent = target0.textContent;
-        //     console.log(target.textContent);
-        //     console.log(value);
-
-        // }
-        // else if(value === "selected_jpn"){
-        //     console.log(value);
-        //     target.textContent = '千葉にはディズニーランドがあります1';
-        //     console.log(target.textContent);
-        // }
-        // else if(value === "selected_en"){
-        //     console.log(value);
-        //     target.textContent = '千葉にはディズニーランドがあります2';
-        //     console.log(target.textContent);
-        // }
-        // else if(value === "selected_all"){
-        //     target.textContent = '千葉にはディズニーランドがあります3';
-        //     console.log(target.textContent);
-        //     console.log(value);
-        // }
-
-    
-
-        // function changeLang() {
-        //     var value = document.getElementById("myselectbox").value;
-        // var jpn = document.getElementById("jpn");
-        // var en = document.getElementById("en");
-        // var target = document.getElementById("target");
-        // var target0 = "";
-       
-        // if(value === "select"){
-            
-        //     target.textContent = target0.textContent;
-        //     console.log(target.textContent);
-        //     console.log(value);
-
-        // }
-        // else if(value === "selected_jpn"){
-        //     console.log(value);
-        //     target.textContent = jpn.textContent;
-        //     console.log(target.textContent);
-        // }
-        // else if(value === "selected_en"){
-        //     console.log(value);
-        //     target.textContent = en.textContent;
-        //     console.log(target.textContent);
-        // }
-        // else if(value === "selected_all"){
-        //     target.textContent = '千葉にはディズニーランドがあります';
-        //     console.log(target.textContent);
-        //     console.log(value);
-        // }
-        // }
         function changeLang() {
         var target = document.getElementById("target");
         var value = document.getElementById("myselectbox").value;
         var jpn = document.getElementById("jpn");
         var en = document.getElementById("en");
         var all = document.getElementById("all");
-        var target0 = "";
        
         if(value === "select"){
-            // target.textContent = target0.textContent;
-            // console.log(target.textContent);
             en.style.display = "block"
             jpn.style.display = "block"
             console.log(value);
@@ -115,13 +55,11 @@
             console.log(value);
             en.style.display = "none"
             jpn.style.display = "block"
-            // console.log(target.textContent);
         }
         else if(value === "selected_en"){
             console.log(value);
             en.style.display = "block"
             jpn.style.display = "none"
-            // console.log(target.textContent);
         }
         else if(value === "selected_all"){
             en.style.display = "block"
@@ -129,11 +67,6 @@
             console.log(value);
         }
         }
-        // 解決策！！！
-        // 1,文字列として直接打ち込んであげる。
-        // 2,
-        
-        
     </script>
 </body>
 </html>
