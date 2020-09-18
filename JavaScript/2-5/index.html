@@ -23,7 +23,7 @@
         <option value="selected_en">English</option>
         <option value="selected_all">全て表示</option>
     </select>
-    <table id="target">
+    <table>
         <tr id="jpn">
             <th>日本</th>
             <td>こんにちは</td>
@@ -40,11 +40,9 @@
 
     <script>
         function changeLang() {
-        var target = document.getElementById("target");
         var value = document.getElementById("myselectbox").value;
         var jpn = document.getElementById("jpn");
         var en = document.getElementById("en");
-        var all = document.getElementById("all");
        
         if(value === "select"){
             en.style.display = "block"
