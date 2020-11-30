@@ -16,6 +16,9 @@
     <button class="click">クリック</button>
     <script>
     //  ここにjQueryを記入
+    $("button").on("click", function () {
+      $(".left, .right").toggleClass("action");
+    });
     </script>
   </body>
 </html>

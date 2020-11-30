@@ -37,7 +37,9 @@ if(isset($_GET["contract_type"],$_GET["agency_id"],$_GET["status"],$_GET["keywor
 <main class="main">
 <?php echo $this->Html->link('新規タスク', '/Customers/create'); ?>
 <p>該当件数:<?php echo count($cus_data); ?>件</p>
-
+<?php
+    print $this->Paginator->counter('{:count}件中{:start}-{:end}件({:pages}ページ中{:page}ページ)<br>');
+?>
 <table> 
     <tr> 
         <th>会員ID</th> 
@@ -48,7 +50,7 @@ if(isset($_GET["contract_type"],$_GET["agency_id"],$_GET["status"],$_GET["keywor
         <th>ステータス</th> 
         <th>契約日</th> 
     </tr> 
-<?php foreach($cus_data as $row): ?> 
+<?php foreach($cu_data as $row): ?> 
 
 <tr>
 <td><?php echo $this->Html->link($row['Customer']['id'], '/Customers/view/' . $row['Customer']['id']); ?></td>

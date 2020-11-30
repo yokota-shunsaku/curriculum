@@ -19,9 +19,11 @@ public function index() {
         $this->set('cus_data', $options);
         }
         else{
-        $options = array( 'conditions' => array( 'Customer.deleted' => 0 ));
-        $customers_data = $this->Customer->find('all', $options);
-        $this->set('cus_data', $customers_data); 
+        $options = array( 'conditions' => array( 'Customer.status' => 0 ));
+        $options2 = array( 'conditions' => array( 'Customer.line_type' => 0 ));
+        $customers_da = $this->Customer->find($options, $options2);
+        $customers_data = $this->Customer->find('all', $customers_da);
+        $this->set('cu_data', $customers_data); 
     }
         
 
