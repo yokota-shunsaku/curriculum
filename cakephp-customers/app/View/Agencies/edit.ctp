@@ -3,5 +3,5 @@
 echo $this->Form->create('Agency');
 echo $this->Form->input('agency_name' ,array('label' => '代理店名'));
 echo $this->Form->input('id', array('type' => 'hidden'));
-echo $this->Form->end('Save Post');
+echo $this->Form->end('登録する');
 ?>

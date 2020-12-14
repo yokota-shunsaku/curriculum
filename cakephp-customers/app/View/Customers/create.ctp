@@ -40,13 +40,13 @@
 契約日<br>
 <?php
 echo $this->Form->input("contract_day", array(
-        'type' => 'datetime',
-        'dateFormat' => 'YMD',
-        'monthNames' => false,
-        'timeFormat' => '24',
-        'separator' => '/',
-    ));
-    ?>
+    'type' => 'datetime',
+    'dateFormat' => 'YMD',
+    'monthNames' => false,
+    'timeFormat' => '24',
+    'separator' => '/',
+));
+?>
 
 <input type="submit" value="登録">
 </form>

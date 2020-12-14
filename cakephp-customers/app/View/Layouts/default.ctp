@@ -40,10 +40,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 			<h1>
 				<?php echo $this->Html->link('顧客情報', '/customers/index'),'&nbsp;&nbsp;&nbsp;',
-							$this->Html->link('管理ユーザー', '/users/index'),'&nbsp;&nbsp;&nbsp;',
-							$this->Html->link('代理店一覧', '/agencies/index'),'&nbsp;&nbsp;&nbsp;',
-							$this->Html->link('ログイン', '/users/login'),'&nbsp;&nbsp;&nbsp;',
-							$this->Html->link('ログアウト', '/users/logout'); ?>
+					$this->Html->link('管理ユーザー', '/users/index'),'&nbsp;&nbsp;&nbsp;',
+					$this->Html->link('代理店一覧', '/agencies/index'),'&nbsp;&nbsp;&nbsp;',
+					$this->Html->link('ログアウト', '/users/logout'); 
+				?>
 			</h1>
 		</div>
 		<div id="content">
@@ -54,11 +54,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 		<div id="footer">
 			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'https://cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
+				$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+				'https://cakephp.org/',
+				array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
+			);?>
 			<p>
 				<?php echo $cakeVersion; ?>
 			</p>

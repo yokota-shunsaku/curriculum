@@ -1,3 +1,4 @@
+<h3>管理ユーザー一覧</h3>
 <?php echo $this->Html->css('page_styles'); ?>
 
 <?php echo $this->Html->link('ユーザー登録', '/Users/add'); ?>
@@ -14,10 +15,9 @@
         <th>操作</th> 
         <th></th> 
     </tr> 
-<?php foreach($users_data as $row): ?> 
-
-<tr>
-<td><?php echo $this->Html->link($row['User']['id'], '/Users/view/' . $row['User']['id']); ?></td>
+    <?php foreach($users_data as $row): ?> 
+    <tr>
+        <td><?php echo h($row['User']['id']); ?></td>
         <td><?php echo h($row['User']['username']); ?></td>
         <td><?php echo h($row['User']['password']); ?></td>
         <td><?php echo h($row['User']['role']); ?></td>
@@ -25,8 +25,6 @@
         <td><?php echo h($row['User']['modified']); ?></td>
         <td><?php echo $this->Html->link('編集',array('action'=>'edit',$row['User']['id'])); ?></td>
         <td><?php echo $this->Html->link( '削除', '/Users/delete/' . $row['User']['id'], array('class' => 'button') ); ?></td>
-        </tr>
-
-        
-<?php endforeach; ?>
+    </tr>
+    <?php endforeach; ?>
 </table>

@@ -3,8 +3,6 @@ App::uses('AppController', 'Controller');
 
 class UsersController extends AppController {
 
-
-
     public function index() {
         $this->User->recursive = 0;
         $this->set('users', $this->paginate());
@@ -57,22 +55,11 @@ class UsersController extends AppController {
     }
 
     public function delete($id = null) {
-        // Prior to 2.5 use
-        // $this->request->onlyAllow('post');
-
         // URLの末尾からタスクのIDを取得してメッセージを作成 
         $id = $this->request->pass[0];
-        // $this->Task->delete($id); 
         // doneと同様の流れで大丈夫です 
         $this->User->id = $id;
         $this->User->saveField('deleted', 1);
-        
-
-        // $this->request->allowMethod('post');
-        // $this->User->id = $id;
-        // if (!$this->User->exists()) {
-            // throw new NotFoundException(__('Invalid user'));
-        // }
         if ($this->User->delete()) {
             $this->Flash->success(__('User deleted'));
             return $this->redirect(array('action' => 'index'));
@@ -82,23 +69,23 @@ class UsersController extends AppController {
     }
 
     public function beforeFilter() {
-    parent::beforeFilter();
-    // ユーザー自身による登録とログアウトを許可する
-    $this->Auth->allow('add', 'logout');
-}
+        parent::beforeFilter();
+        // ユーザー自身による登録とログアウトを許可する
+        $this->Auth->allow('add', 'logout');
+    }
 
-public function login() {
-    if ($this->request->is('post')) {
-        if ($this->Auth->login()) {
-            $this->redirect($this->Auth->redirect());
-        } else {
-            $this->Flash->error(__('Invalid username or password, try again'));
+    public function login() {
+        if ($this->request->is('post')) {
+            if ($this->Auth->login()) {
+                $this->redirect($this->Auth->redirect(array('controller' => 'customers', 'action' => 'index')));
+            } else {
+                $this->Flash->error(__('Invalid username or password, try again'));
+            }
         }
     }
-}
 
-public function logout() {
-    $this->redirect($this->Auth->logout());
-}
+    public function logout() {
+        $this->redirect($this->Auth->logout());
+    }
 
 }
