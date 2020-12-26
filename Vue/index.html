@@ -8,16 +8,36 @@
 </head>
 <body>
     <div id="app">
+        <p>
+            残タスク数：{{remaining}}/{{list.length}}
+        </p>
         <input type="text" v-model="addText" placeholder="ToDoを入力して">
         <button v-on:click="addToDo()">追加</button>
         <button v-on:click="deleteBtn()">削除</button><hr>
-        <ul v-for="todo in list">
-            <li>
-                <span v-bind:class="{ done: todo.isChecked }">
-                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
-                </span>
-            </li>
-        </ul>
+        <input type="text" v-model="keyword">
+        <div v-if="keyword.length">
+            <ul>
+                <li v-for="todo in filteredlist">
+                    <span v-bind:class="{ done: todo.isChecked }">
+                        <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div v-else>
+            <div v-if="list.length">
+                <ul>
+                    <li v-for="todo in list">
+                        <span v-bind:class="{ done: todo.isChecked }">
+                            <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div v-else>
+                <p>現在タスクはありません</p>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

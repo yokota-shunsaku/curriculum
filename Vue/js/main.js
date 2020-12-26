@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         list: [],
         addText: '',
+        keyword: '',
     },
     //watchでlistの変更を監視
     watch: {
@@ -33,5 +34,28 @@ var app = new Vue({
                 return !todo.isChecked;
             });
         }
-    }
+    },
+	computed: {
+		remaining: function() {
+			var count = 0;
+			var list = this.list;
+			var length = list.length;
+			for(var i = 0; i < length; i++) {
+				if(!list[i].isChecked) {
+					count++;
+				}
+			}
+			return count;
+        },
+        filteredlist: function() {
+            var data = [];
+            for(var i in this.list) {
+                var aaa = this.list[i];
+                if(aaa.text.indexOf(this.keyword) !== -1) {
+                    data.push(aaa);
+                }
+            }
+            return data;
+        }
+	}
 });
